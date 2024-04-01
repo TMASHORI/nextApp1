@@ -1,9 +1,12 @@
-import React from 'react'
+import { handleGithubLogin } from "@/lib/action"
 
-const Page = () => {
+const Page = async () => {
+
   return (
     <div>
-      Login Page
+      <form action={handleGithubLogin}>
+        <button>Login with Github</button>
+      </form>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { addPost, addUser, deletePost } from "@/lib/action";
+import { DELETE } from "../api/blog/[slug]/route";
 
 const ServerActionTestPage = () => {
 
@@ -38,7 +39,7 @@ const ServerActionTestPage = () => {
                 flexDirection: "column",
                 justifyContent: "space-between"
             }}><h2>Delete Post</h2>
-                <input type="text" placeholder="Enter in Post Id" name="id" />
+                <input type="text" placeholder="Enter in Post Id" id="userInput" name="id" />
                 <button>Delete Post</button>
             </form>
             <form action={addUser} style={{

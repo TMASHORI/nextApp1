@@ -5,23 +5,23 @@ import PostUser from "@/components/postUser/postUser";
 import { Suspense } from "react";
 
 //FETCH DATA WITH AN API
-// const getData = async (slug) => {
+const getData = async (slug) => {
 
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
-//   const data = await res.json();
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const data = await res.json();
 
-//   return data;
-// }
+  return data;
+}
 
 
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
 
   // FECTH DATA WITH AN API
-  // const post = await getData(parseInt(slug));
+  const post = await getData(slug);
 
   // FETCH DATA WITHOUT AN API
-  const post = await getPost(slug)
+  // const post = await getPost(slug)
 
   return (
     <div className={styles.container}>
@@ -42,7 +42,7 @@ const SinglePostPage = async ({ params }) => {
           </Suspense>}
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published: </span>
-            <span className={styles.detailValue}>01.01.2024</span>
+            <span className={styles.detailValue}>{post.createdAt.toString().slice(0, 10)}</span>
           </div>
         </div>
         <div className={styles.content}>{post.desc}
