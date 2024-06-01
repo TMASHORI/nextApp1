@@ -13,11 +13,11 @@ export default function Home() {
           <button className={styles.button}>Contact</button>
         </div>
         <div className={styles.brands}>
-          <Image src="/brands.png" alt="brands image" fill className={styles.brandImg} />
+          <div alt="brands image" className={styles.brandImg} />
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <Image  src="/hero.gif" fill className={styles.heroImg} />
+        <Image  src="/hero.gif" fill className={styles.heroImg} unoptimized/>
       </div>
     </div>
   );

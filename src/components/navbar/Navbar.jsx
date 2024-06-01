@@ -2,13 +2,13 @@
 import Link from "next/link"
 import Links from "./links/Links"
 import styles from "./navbar.module.css"
-import { auth } from "@/lib/auth"
+import { auth, signIn } from "@/lib/auth"
 
 const Navbar =  async() => {
 
   const session = await auth() || false
 
-  return (
+  return ( 
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>Lama</Link>
       <div>

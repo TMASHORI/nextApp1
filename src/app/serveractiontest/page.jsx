@@ -9,19 +9,20 @@ const ServerActionTestPage = () => {
             width: '100%',
             height: 'fit-content',
             display: "flex",
-            gap:'30px',
+            gap: '30px',
             flexDirection: "column",
             justifyContent: "space-between",
-            alignItems:'center'
+            alignItems: 'center'
         }}>
             <form action={addPost} style={{
-                gap:'3px',
+                gap: '3px',
                 width: '50%',
                 height: '100%',
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between"
-            }}><h2>Create A Post</h2>
+            }}>
+                <h2>Create A Post</h2>
                 <input type="text" placeholder="title" name="title" />
                 <input type="text" placeholder="desc" name="desc" />
                 <input type="text" placeholder="slug" name="slug" />
@@ -30,11 +31,11 @@ const ServerActionTestPage = () => {
 
                 <button>Create Post</button>
             </form>
-            
+
             <form action={deletePost} style={{
                 width: '50%',
                 height: '100%',
-                gap:'3px',
+                gap: '3px',
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between"
@@ -45,7 +46,7 @@ const ServerActionTestPage = () => {
             <form action={addUser} style={{
                 width: '50%',
                 height: '100%',
-                gap:'3px',
+                gap: '3px',
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between"

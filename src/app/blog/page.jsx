@@ -9,7 +9,7 @@ export const metadata = {
 
 // FECTH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/blog",{next:{revalidate:3600,cache:'no-store'}},);
+  const res = await fetch("http://localhost:3000/api/blog",{next:{revalidate:3600},cache:'no-store'},);
   const data = await res.json();
 
   if (!res.ok) {
@@ -18,6 +18,8 @@ const getData = async () => {
 
   return data;
 }
+
+
 
 
 
@@ -43,4 +45,4 @@ const Page = async () => {
   )
 }
 
-export default Page
+export default Page;

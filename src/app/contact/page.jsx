@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./contact.module.css";
 import dynamic from "next/dynamic";
+import { connectToDb } from "@/lib/utils";
 
 
 export const metadata = {
@@ -10,6 +11,8 @@ export const metadata = {
 };
 
 const ContactPage = () => {
+
+  connectToDb()
 
   return (
     <div className={styles.container}>

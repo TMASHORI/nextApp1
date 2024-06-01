@@ -10,9 +10,7 @@ const NavigationTestPage = () => {
     const searchParams = useSearchParams()
 
     const q = searchParams.get("q")
-
-
-
+ 
     const handleClick = ()=>{
         console.log("clicked")
         router.push("/")
